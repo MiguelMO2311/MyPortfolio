@@ -5,38 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - Mi Portafolio</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/project.css' %}">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'about' %}">Sobre Mí</a></li>
-                <li><a href="{% url 'projects' %}">Proyectos</a></li>
-                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/home/' %}active{% endif %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">Sobre Mí</a></li>
+                <li><a href="{% url 'projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">Proyectos</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contacto</a></li>
             </ul>
+            <img src="{% static 'portfolio/media/perfil.jpg' %}" alt="Mi Foto" class="avatar">
         </nav>
     </header>
     <main>
         <section id="projects">
-            <h1>Mis Proyectos</h1>
+            <h1>Mis Proyectos</h1> 
             <p>Aquí hay algunos de los proyectos en los que he trabajado. Haz clic en cada proyecto para obtener más información.</p>
             <div class="project-list">
-                {% for project in projects %}
-                    <div class="project-item">
-                        <h2>{{ project.title }}</h2>
-                        <img src="{{ project.image.url }}" alt="{{ project.title }}">
-                        <p>{{ project.description }}</p>
-                        <p><strong>Creado:</strong> {{ project.created }}</p>
-                        <p><strong>Actualizado:</strong> {{ project.updated }}</p>
-                    </div>
-                {% endfor %}
+                <div class="project-item">
+                    <h2>Creación de Diagrama de Tablas de Base de datos</h2>
+                    <p>Diagrama de Tablas y relaciones de la base de datos School Store</p>
+                    <a href="{% static 'portfolio/sbbdd/Diagram_SchoolStore.pdf' %}" target="_blank">Descargar Diagrama</a>
+                </div>
+                <div class="project-item">
+                    <h2>Script para creación de Base de Datos School Store</h2>
+                    <p>Query creación de la base de datos, tablas, atributos, PK y FK</p>
+                    <a href="{% static 'portfolio/sbbdd/SchoolStore.sql' %}" target="_blank">Descargar archivo SQL</a>
+                </div>
+                <div class="project-item">
+                    <h2>XperGG</h2>
+                    <p>Plataforma Web dedicada a la creación de una comunidad de gamers apasionados, que permite a los usuarios iniciar sesión, crear publicaciones, recibir comentarios y likes. Ofrece la posibilidad de seleccionar una plataforma de juego y crear hilos específicos relacionados con diferentes juegos.</p>
+                    <a href="{% static 'portfolio/media/xpergg.mp4' %}" target="_blank">Ver Video</a>
+                </div>
+                <div class="project-item">
+                    <h2>BookStore</h2>
+                    <p>Web de libros conectada a una API externa que permite a los usuarios registrados gestionar sus colecciones de libros, añadiendo, eliminando y editando información sobre sus libros favoritos.</p>
+                    <a href="{% static 'portfolio/media/bookstore.mp4' %}" target="_blank">Ver Video</a>
+                </div>
+                <!-- Añade más proyectos según sea necesario -->
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

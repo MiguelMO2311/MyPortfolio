@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Mi Portafolio</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'about' %}">Sobre Mí</a></li>
-                <li><a href="{% url 'projects' %}">Proyectos</a></li>
-                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">Sobre Mí</a></li>
+                <li><a href="{% url 'projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">Proyectos</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contacto</a></li>
             </ul>
+            <img src="{% static 'portfolio/media/perfil.jpg' %}" alt="Mi Foto" class="avatar">
         </nav>
     </header>
     <main>
         <section id="home">
             <h1>Bienvenido a Mi Portafolio</h1>
-            <p>Aquí encontrarás todos mis proyectos y habilidades.</p>
+            <p>¡Hola! Soy Miguel Meneses Oliveros, un apasionado Desarrollador Full Stack especializado en una amplia gama de tecnologías modernas. Mi experiencia abarca desde el desarrollo de aplicaciones web dinámicas y escalables hasta el manejo de bases de datos complejas y la implementación de soluciones de ciberseguridad.</p>
         </section>
     </main>
     <footer>
