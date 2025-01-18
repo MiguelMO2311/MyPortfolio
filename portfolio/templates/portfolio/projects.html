@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - Mi Portafolio</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/project.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR8/Mzftom5N5v5y8QhgjqqUjOIG0ePmfE2AfMQDw" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -20,46 +23,15 @@
         </nav>
     </header>
     <main>
+        <section id="certifications">
+            {% include 'portfolio/certifications/certifications.html' %}
+        </section>
         <section id="projects">
-            <h1>Mis Proyectos</h1> 
-            <p>Aquí hay algunos de los proyectos en los que he trabajado. Haz clic en cada proyecto para obtener más información.</p>
-            <div class="project-list">
-                <div class="project-item">
-                    <h2>Creación de Diagrama de Tablas de Base de datos</h2>
-                    <p>Reto-1a. Diagrama de Tablas y relaciones de la base de datos School Store</p>
-                    <a href="{% static 'portfolio/sbbdd/Diagram_SchoolStore.pdf' %}" target="_blank">Descargar Diagrama</a>
-                </div>
-                <div class="project-item">
-                    <h2>Script para creación de Base de Datos School Store</h2>
-                    <p>Reto-1b. Query creación de la base de datos, tablas, atributos, PK y FK</p>
-                    <a href="{% static 'portfolio/sbbdd/SchoolStore.sql' %}" target="_blank">Descargar archivo SQL</a>
-                </div>
-                <div class="project-item">
-                    <h2>Creación de Consultas de Tablas de Base de datos</h2>
-                    <p>Reto-2. Consulta de Tablas de la base de datos School Store</p>
-                    <a href="{% static 'portfolio/sbbdd/SchoolStoreMySql.sql' %}" target="_blank">Descargar archivo SQL</a>
-                </div>
-                <div class="project-item">
-                    <h2>Creación de Tablas SQL Server, consultas y bucles_function</h2>
-                    <p>Reto-3. Consulta de Tablas de la base de datos School Store</p>
-                    <a href="{% static 'portfolio/sbbdd/Reto3.sql' %}" target="_blank">Descargar archivo SQL</a>
-                </div>
-                <div class="project-item">
-                    <h2>XperGG</h2>
-                    <p>Plataforma Web dedicada a la creación de una comunidad de gamers apasionados, que permite a los usuarios iniciar sesión, crear publicaciones, recibir comentarios y likes. Ofrece la posibilidad de seleccionar una plataforma de juego y crear hilos específicos relacionados con diferentes juegos.</p>
-                    <a href="{% static 'portfolio/media/xpergg.mp4' %}" target="_blank">Ver Video</a>
-                </div>
-                <div class="project-item">
-                    <h2>BookStore</h2>
-                    <p>Web de libros conectada a una API externa que permite a los usuarios registrados gestionar sus colecciones de libros, añadiendo, eliminando y editando información sobre sus libros favoritos.</p>
-                    <a href="{% static 'portfolio/media/bookstore.mp4' %}" target="_blank">Ver Video</a>
-                </div>
-                <!-- Añade más proyectos según sea necesario -->
-            </div>
+            {% include 'portfolio/projects_titles/projects_titles.html' %}
         </section>
     </main>
     <footer>
-        <p> Conéctate conmigo en <a href="https://www.linkedin.com/in/miguel-men-oli/" target="_blank">LinkedIn</a> </p>
+        <p>Conéctate conmigo en <a href="https://www.linkedin.com/in/miguel-men-oli/" target="_blank">LinkedIn</a></p>
         <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
 </body>

@@ -54,6 +54,76 @@ main {
     padding: 2em;
 }
 
+
+#certifications h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#certifications p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.certifications-item {
+    flex: 1 0 48%; /* Dos cajas por fila con espacio entre ellas */
+    box-sizing: border-box;
+    padding: 1em;
+    margin-bottom: 2%;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 350px; /* Altura fija menor para todas las cajas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Evitar desbordamiento */
+}
+
+.certifications-item h2 {
+    font-size: 1.2em; /* Ajustar tamaño de la fuente */
+    margin-bottom: 0.5em;
+    white-space: normal; /* Permitir que el texto continúe en la siguiente línea */
+}
+
+.certifications-item p {
+    font-size: 1em; /* Ajustar tamaño de la fuente */
+    margin-bottom: 0.5em; /* Reducir margen inferior */
+    overflow: hidden; /* Evitar desbordamiento */
+    white-space: normal; /* Permitir que el texto continúe en la siguiente línea */
+    text-overflow: ellipsis; /* Agregar puntos suspensivos si se desborda */
+}
+
+.certifications-item video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.certifications-item a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: auto;
+}
+
+.certifications-item a:hover {
+    background: #555;
+}
+
 #projects h1 {
     font-size: 2em;
     margin-bottom: 1em;
@@ -132,4 +202,73 @@ footer {
     width: 100%;
     height: 5%;
     bottom: 0;
+}
+
+#certifications h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#certifications p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.certifications-item {
+    flex: 1 0 48%; /* Dos cajas por fila con espacio entre ellas */
+    box-sizing: border-box;
+    padding: 1em;
+    margin-bottom: 2%;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 350px; /* Altura fija menor para todas las cajas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Evitar desbordamiento */
+}
+
+.certifications-item h2 {
+    font-size: 1.2em; /* Ajustar tamaño de la fuente */
+    margin-bottom: 0.5em;
+    white-space: normal; /* Permitir que el texto continúe en la siguiente línea */
+}
+
+.certifications-item p {
+    font-size: 1em; /* Ajustar tamaño de la fuente */
+    margin-bottom: 0.5em; /* Reducir margen inferior */
+    overflow: hidden; /* Evitar desbordamiento */
+    white-space: normal; /* Permitir que el texto continúe en la siguiente línea */
+    text-overflow: ellipsis; /* Agregar puntos suspensivos si se desborda */
+}
+
+.certifications-item video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.certifications-item a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: auto;
+}
+
+.certifications-item a:hover {
+    background: #555;
 }
